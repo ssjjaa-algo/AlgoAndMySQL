@@ -1,8 +1,8 @@
+package Baekjoon;
+
 import java.io.*;
-import java.util.*;
 
-public class Main {
-
+public class BOJ1806 {
 
     /*
     10,000 이하의 자연수로 이루어진 길이 N짜리 수열이 주어진다.
