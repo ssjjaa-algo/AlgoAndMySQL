@@ -106,4 +106,5 @@ public class BOJ14391 {
 
         return sum;
     }
+    // commit 확인
 }
