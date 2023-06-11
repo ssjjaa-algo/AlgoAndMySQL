@@ -3,6 +3,11 @@ package Baekjoon;
 import java.io.*;
 import java.util.*;
 
+/*
+시간 초과 : 인접리스트에 모든 원소를 넣고 bfs를 돌렸을 때 났음.
+그래서 MST가 생성될 때 선택한 간선들만 인접리스트에 넣고 나서 bfs를 돌려 시간초과 해결
+
+ */
 public class BOJ23034 {
 
     static class Edge implements Comparable<Edge>{
