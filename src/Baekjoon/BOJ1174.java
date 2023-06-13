@@ -3,7 +3,7 @@ package Baekjoon;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ1174 {
 
     static int count = 0;
     static int[] arr = new int[10];
