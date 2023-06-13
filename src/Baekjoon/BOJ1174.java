@@ -38,6 +38,7 @@ public class BOJ1174 {
                 sb.append(arr[i]);
             }
             stringList.add(sb.toString());
+            System.out.println(sb.toString());
             sb.setLength(0);
         }
 
