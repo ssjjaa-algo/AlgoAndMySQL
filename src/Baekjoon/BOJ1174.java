@@ -14,7 +14,7 @@ public class BOJ1174 {
         BufferedWriter wr = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(br.readLine());
-        if (N >= 1024) { // 9876543210이 1023번째로 등장하는 마지막 감소하는 수임.
+        if (N >= 1024) { // 9876543210이 1023번째로 등장하는 마지막 감소하는 수
             System.out.println(-1);
             return;
         }
