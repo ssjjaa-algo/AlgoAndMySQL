@@ -9,7 +9,6 @@ public class BOJ21278 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     static int N,M;
-    static List<Integer> adj[];
     static int[] select = new int[2];
     static int ans = Integer.MAX_VALUE;
     static int firstBuilding;

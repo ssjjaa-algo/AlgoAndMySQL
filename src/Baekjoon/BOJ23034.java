@@ -10,6 +10,9 @@ import java.util.*;
  */
 public class BOJ23034 {
 
+    static class test {
+
+    }
     static class Edge implements Comparable<Edge>{
         int from;
         int to;
