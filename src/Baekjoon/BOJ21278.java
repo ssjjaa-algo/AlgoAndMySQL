@@ -11,6 +11,7 @@ public class BOJ21278 {
     static int N,M;
     static int[] select = new int[2];
     static int ans = Integer.MAX_VALUE;
+    static List<Integer> adj[];
     static int firstBuilding;
     static int secondBuilding;
     public static void main(String[] args) throws IOException{
