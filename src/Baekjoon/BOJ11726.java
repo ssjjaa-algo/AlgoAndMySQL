@@ -11,6 +11,7 @@ public class BOJ11726 {
 
         int[] dp = new int[N + 1];
 
+        dp[0] = 0;
         dp[1] = 1;
         dp[2] = 2;
 
