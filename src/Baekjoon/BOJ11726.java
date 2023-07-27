@@ -9,7 +9,7 @@ public class BOJ11726 {
 
         int N = Integer.parseInt(br.readLine());
 
-        int[] dp = new int[N + 1];
+        int[] dp = new int[N + 2];
 
         dp[0] = 0;
         dp[1] = 1;
