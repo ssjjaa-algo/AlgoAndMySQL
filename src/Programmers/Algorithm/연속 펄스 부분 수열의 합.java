@@ -1,5 +1,5 @@
 package Programmers.Algorithm;
-class Solution {
+class 연속펄스부분수열의합 {
     public long solution(int[] sequence) {
 
         int[] arr1 = makeArr(sequence,1);

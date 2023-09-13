@@ -1,7 +1,7 @@
 package Programmers.Algorithm;
 
 import java.util.*;
-class Solution {
+class 네트워크bfs {
 
     public int solution(int n, int[][] computers) {
 

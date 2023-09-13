@@ -2,7 +2,7 @@ package Programmers.Algorithm;
 
 import java.util.*;
 
-class Solution {
+class 호텔방배정 {
 
     Map<Long,Long> map = new HashMap<>();
 

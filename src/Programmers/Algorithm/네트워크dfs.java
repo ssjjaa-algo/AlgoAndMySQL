@@ -1,6 +1,6 @@
 package Programmers.Algorithm;
 
-class Solution {
+class 네트워크dfs {
 
     public int solution(int n, int[][] computers) {
 
