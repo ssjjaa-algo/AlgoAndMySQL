@@ -4,11 +4,6 @@ import java.io.*;
 import java.util.*;
 public class BOJ2665 {
 
-    /**
-     * char 배열을 만든다.
-     * char 배열이 검은방인 경우 dp가 더 작은 경우 갱신
-     * 아닌 경우 continue
-     */
     static class Node {
         int x,y;
 
