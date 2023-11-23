@@ -2,6 +2,8 @@ package Baekjoon;
 
 import java.io.*;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class BOJ21278 {
 
