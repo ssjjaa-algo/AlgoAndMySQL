@@ -8,19 +8,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-/*
-1. 이미 플러그에 꽂혀있는 경우
-    if (set.contains(command)) continue
-
-2. 플러그에 꽂혀있지 않은 경우
-    if (!set.contains(command))
-    - 해당 위치에서 k개의 플러그를 확인한다.
-        for (int j = 현재 명령어 위치; j < 현재 명령어 위치 + k; j++)
-            if (set.contains(command[j]))
-                count[command[j]]++;
-    - 꽂혀있는 플러그 중 count[set의 원소]가 가장 작은 원소를 제거한다.
-
- */
 public class BOJ1700 {
 
     static int N,K;
