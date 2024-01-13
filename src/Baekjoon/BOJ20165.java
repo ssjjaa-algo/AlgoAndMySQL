@@ -46,7 +46,6 @@ public class BOJ20165 {
 
             ans += attack(idx * 2);
             defend(idx * 2 + 1);
-
             idx++;
         }
 
@@ -56,19 +55,21 @@ public class BOJ20165 {
 
     private static void print() {
 
+        StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= M; j++) {
-                System.out.print(map[i][j].alive+ " ");
+                sb.append(map[i][j].alive).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
+
+        System.out.print(sb);
     }
 
     private static void defend(int idx) {
 
         int x = command[idx].x;
         int y = command[idx].y;
-
         map[x][y].alive='S';
 
     }
