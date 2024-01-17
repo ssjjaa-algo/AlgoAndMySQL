@@ -74,26 +74,15 @@ public class BOJ1525 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int cnt = 0;
         for (int i = 0; i < 3; i++) {
             String[] input = br.readLine().split(" ");
             for (int j = 0; j < 3; j++) {
                 original += input[j];
-                if(input[j].charAt(0) == '0') cnt++;
             }
         }
 
-        int limit = 9 - cnt;
-        int idx = 1;
-        while (limit-- > 0) {
-            ans += idx++;
-        }
-
-        while (cnt-- > 0) {
-            ans += '0';
-        }
-
         set.add(original);
+        ans = "123456780";
     }
 }
 
