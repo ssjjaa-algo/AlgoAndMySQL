@@ -3,7 +3,8 @@ package Baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.TreeSet;
 
 public class BOJ25406 {
@@ -26,7 +27,7 @@ public class BOJ25406 {
     }
     static TreeSet<Node> cntSet = new TreeSet<>();
     static TreeSet<Node> idxSet = new TreeSet<>();
-    static PriorityQueue<Integer> pq[];
+    static Queue<Integer> q[];
     static int N;
     public static void main(String[] args) throws IOException {
 
@@ -53,10 +54,10 @@ public class BOJ25406 {
                 int num = node.num;
                 prev = num;
 
-                sb.append(pq[num].peek()).append(" ");
-                idxSet.remove(new Node(num, pq[num].peek()));
+                sb.append(q[num].peek()).append(" ");
+                idxSet.remove(new Node(num, q[num].peek()));
                 cntSet.remove(node);
-                pq[num].poll();
+                q[num].poll();
 
                 check(num);
             }
@@ -76,8 +77,8 @@ public class BOJ25406 {
 
                 sb.append(findNode.second).append(" ");
                 idxSet.remove(findNode);
-                cntSet.remove(new Node(num, pq[num].size()));
-                pq[num].poll();
+                cntSet.remove(new Node(num, q[num].size()));
+                q[num].poll();
 
                 check(num);
 
@@ -88,10 +89,10 @@ public class BOJ25406 {
 
     private static void check(int num) {
 
-        if (pq[num].isEmpty()) return;
+        if (q[num].isEmpty()) return;
 
-        idxSet.add(new Node(num, pq[num].peek()));
-        cntSet.add(new Node(num, pq[num].size()));
+        idxSet.add(new Node(num, q[num].peek()));
+        cntSet.add(new Node(num, q[num].size()));
 
     }
 
@@ -100,21 +101,21 @@ public class BOJ25406 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         N = Integer.parseInt(br.readLine());
-        pq = new PriorityQueue[N + 1];
+        q = new ArrayDeque[N + 1];
         for (int i = 1; i <= N; i++) {
-            pq[i] = new PriorityQueue<>();
+            q[i] = new ArrayDeque<>();
         }
 
         String[] input = br.readLine().split(" ");
         for (int i = 1; i <= N; i++) {
             int num = Integer.parseInt(input[i - 1]);
-            pq[num].add(i);
+            q[num].add(i);
         }
 
         for (int i = 1; i <= N; i++) {
-            if (pq[i].isEmpty()) continue;
-            cntSet.add(new Node(i,pq[i].size()));
-            idxSet.add(new Node(i,pq[i].peek()));
+            if (q[i].isEmpty()) continue;
+            cntSet.add(new Node(i,q[i].size()));
+            idxSet.add(new Node(i,q[i].peek()));
         }
     }
 }
