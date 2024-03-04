@@ -1,0 +1,13 @@
+-- 1. self join
+SELECT distinct(A.CART_ID) AS CART_ID
+FROM CART_PRODUCTS A, CART_PRODUCTS B
+WHERE A.CART_ID = B.CART_ID AND
+    (A.NAME = 'Milk' AND B.NAME = 'Yogurt')
+ORDER BY A.CART_ID
+
+-- 2.
+SELECT CART_ID
+FROM CART_PRODUCTS
+WHERE NAME IN ('Milk', 'Yogurt')
+GROUP BY CART_ID
+HAVING count(distinct(name)) = 2
