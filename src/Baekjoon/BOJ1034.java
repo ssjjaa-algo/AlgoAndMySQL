@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class BOJ1034 {
 
     public static void main(String[] args) throws IOException {
 
